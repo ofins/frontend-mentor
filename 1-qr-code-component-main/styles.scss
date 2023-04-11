@@ -1,0 +1,52 @@
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+
+$default-fontsize: 15px;
+$default-font: 'Outfit', sans-serif;
+$border-radius: 20px;
+
+body {
+    background-color: $light-gray;
+    height:100vh;
+    font-family: $default-font;
+    font-size: $default-fontsize;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:0;
+}
+
+.container {
+    background-color: $white;
+    width:300px;
+    padding:5%;
+    border-radius: $border-radius;
+}
+
+.qrcode {
+    width:100%;
+    border-radius: $border-radius;
+}
+
+.subject-title {
+    font-weight:700;
+    font-size: 20px;
+    color: $dark-blue;
+    padding-inline:20px;
+}
+
+.subject-description {
+    font-weight: 400;
+    color: $grayish-blue;
+    padding-inline:20px;
+}
+
+@media only screen and (min-width:1440px){
+    .container {
+        padding:1%;
+    }
+}

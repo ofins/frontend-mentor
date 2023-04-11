@@ -1,0 +1,43 @@
+body {
+  background-color: hsl(212, 45%, 89%);
+  height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  width: 300px;
+  padding: 5%;
+  border-radius: 20px;
+}
+
+.qrcode {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.subject-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: hsl(218, 44%, 22%);
+  padding-inline: 20px;
+}
+
+.subject-description {
+  font-weight: 400;
+  color: hsl(220, 15%, 55%);
+  padding-inline: 20px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    padding: 1%;
+  }
+}/*# sourceMappingURL=styles.css.map */
