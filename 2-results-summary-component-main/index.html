@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+<body>
+  <div class="container">
+    <div class="scorebox">
+      <span class="scorebox--toptext">Your Result</span>
+      <div class="circle">
+        <span class="circle--number">76</span>
+        <span class="circle--subtext">of 100</span>
+      </div>
+      <span class="scorebox--midtext">Great</span>
+      <p class="scorebox--btmtext">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <h3 class="summarytext">Summary</h3>
+    <div class="list-container"></div>
+    <div class="btn-container">
+      <button class="continue-btn">Continue</button>
+    </div>
+  </div>
+  <script type="module">
+    import data from './data.json' assert {type: 'json'}
+
+    const list = document.querySelector('.list-container')
+
+    const listElements = data.map(item => (
+      `<div class="listbox ${item.category}">
+        <span class="listbox--A">
+          <img src=${item.icon}>
+          <span class="listbox--category">${item.category}</span>
+          </span>
+          <p class="listbox--score">${item.score}<span>/100</span></p>
+        </div>
+      `
+    ))
+
+    for (let i = 0; i<data.length; i++){
+      list.innerHTML = list.innerHTML + listElements[i]
+    }
+  </script>
+</body>
+</html>
