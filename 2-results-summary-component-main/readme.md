@@ -1,5 +1,7 @@
 ### The challenge
 
+[Website-hosted with Netlify](https://resultsummarycomponentchallenge.netlify.app/)
+
 Users should be able to:
 
 - View the optimal layout for the interface depending on their device's screen size
