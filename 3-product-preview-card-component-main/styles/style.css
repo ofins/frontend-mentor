@@ -1,0 +1,113 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 95%;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.desktop-img {
+  display: none;
+}
+
+.context {
+  padding: 5%;
+  font-family: "Montserrat";
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+.context h2 {
+  font-family: "Fraunces";
+  color: hsl(212, 21%, 14%);
+  font-size: 2rem;
+  margin-top: -2%;
+}
+.context p {
+  line-height: 1.4rem;
+}
+
+.context--perfume {
+  letter-spacing: 0.3rem;
+}
+
+.context--desc {
+  margin-top: -5%;
+}
+
+.price-container {
+  display: flex;
+  place-items: center;
+}
+
+.finalPrice {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces";
+  font-size: 2rem;
+}
+
+.originalPrice {
+  margin-left: 5%;
+  text-decoration: line-through;
+}
+
+.addcartbtn {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border-style: none;
+  margin-top: 5%;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Montserrat";
+}
+
+.carticon {
+  width: 20px;
+  margin-right: 5%;
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    width: 45%;
+    height: 60%;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .desktop-img {
+    display: flex;
+    width: 50%;
+    height: 100%;
+  }
+  .context {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .addcartbtn {
+    padding: 5%;
+    transition: all 0.5s ease;
+  }
+  .addcartbtn:hover {
+    cursor: pointer;
+  }
+  .addcartbtn:active {
+    background-color: hsl(212, 21%, 14%);
+  }
+}/*# sourceMappingURL=style.css.map */
