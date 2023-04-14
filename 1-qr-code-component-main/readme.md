@@ -1,3 +1,7 @@
+### Finished Product
+
+[Website - hosted with Netlify](https://qr-code-challenge1.netlify.app/)
+
 ### Screenshot
 
 ![](./images/qr-code-final.png)
