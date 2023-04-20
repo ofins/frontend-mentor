@@ -1,0 +1,109 @@
+//Primary
+$Orange: hsl(25, 97%, 53%);
+
+//Neutral
+$white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+
+//universal
+html {
+    font-family: 'Overpass', sans-serif;
+    font-size:15px;
+    color:$lightGrey;
+}
+
+body {
+    height:100vh;
+    margin:0;
+    display:grid;
+    place-items: center;
+    background-color: $veryDarkBlue;
+}
+
+.ratingicons {
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    background-color: rgba($lightGrey,0.1);
+    display:grid;
+    place-items: center;
+}
+
+h1 {
+    color:$white;
+}
+
+.hide {
+    display:none;
+}
+
+.center {
+    text-align: center;
+}
+
+//container
+
+.container {
+    width:80%;
+    max-width:375px;
+    border-radius:15px;
+    background-color: $darkBlue;
+    padding:20px;
+}
+
+//ratings
+.rating-row {
+    display:flex;
+    justify-content: space-evenly;
+    margin-top:30px;
+}
+
+.ratingicons:hover {
+    cursor:pointer;
+    background-color: $Orange;
+    color:$white;
+}
+
+//button
+.btn-container {
+    display:grid;
+    height:50px;
+    place-items: center;
+    margin-top:20px;
+}
+.submitbtn {
+    width:85%;
+    height:40px;
+    border-style:none;
+    border-radius:20px;
+    background-color: $Orange;
+    color:$white;
+    font-family: 'Overpass';
+    letter-spacing: 2px;
+}
+
+.submitbtn:hover {
+    cursor:pointer;
+    background-color: $white;
+    color:$Orange;
+}
+
+//thank you illustrations
+
+
+
+.textA {
+    color:rgba($Orange,0.7);
+    background-color: rgba($lightGrey,0.1);
+    border-radius:10px;
+    width:60%;
+    height:30px;
+    margin:0 auto;
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    place-items: center;
+}

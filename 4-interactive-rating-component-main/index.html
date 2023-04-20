@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+<main class="container ratingcard">
+  <div class="staricon ratingicons">
+    <img src="/images/icon-star.svg" alt="star">
+  </div>
+  <h1>How did we do?</h1>
+  <p class="subject-description">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+  <div class="rating-row">
+    <div class="ratingicons" data-key="1" onclick="toggleRating(1)"><span class="ratingNumber">1</span></div>
+    <div class="ratingicons" data-key="2" onclick="toggleRating(2)"><span class="ratingNumber">2</span></div>
+    <div class="ratingicons" data-key="3" onclick="toggleRating(3)"><span class="ratingNumber">3</span></div>
+    <div class="ratingicons" data-key="4" onclick="toggleRating(4)"><span class="ratingNumber">4</span></div>
+    <div class="ratingicons" data-key="5" onclick="toggleRating(5)"><span class="ratingNumber">5</span></div>
+  </div>
+  <div class="btn-container">
+    <button class="submitbtn">SUBMIT</button>
+  </div>
+</main>
+<div class="container center hide thankyou">
+  <img src="/images/illustration-thank-you.svg" alt="thankyou">
+  <div class="textA"><p class="ratingResult"></p></div>
+  <h1>Thank you!</h1>
+  <p class="subject-description">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+</div>
+  <script>
+    const ratingCard = document.querySelector('.ratingcard')
+    const thankyou = document.querySelector('.thankyou')
+    const submitBtn = document.querySelector('.submitbtn')
+
+    const ratingicon = document.querySelector('.ratingicons')
+
+    submitBtn.addEventListener("click", function() {
+      ratingCard.classList.add('hide')
+      thankyou.classList.remove('hide')
+    })
+
+    function toggleRating(num) {
+      document.querySelector(`div[data-key="${num}"]`).style.backgroundColor = "orange"
+      for(let i = 1; i<6;i++){
+        if(i === num) {
+        } else {
+          document.querySelector(`div[data-key="${i}"]`).style.backgroundColor = "rgba(177, 172, 172, 0.1)"
+        }
+      }
+      
+      const ratingResult = document.querySelector('.ratingResult')
+      if(!num){
+        ratingResult.innerHTML = `no rating chosen`
+      }
+      ratingResult.innerHTML = `selected ${num} out of 5`
+    }
+
+  </script>
+</body>
+</html>
