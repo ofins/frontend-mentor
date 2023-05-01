@@ -1,0 +1,134 @@
+// Primary colors
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+// Neutral
+$mainBg: hsl(217, 54%, 11%);
+$cardBg: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+//universal
+
+html {
+    font-family:'Outfit';
+    font-size:18px;
+}
+
+body {
+    background-color: $mainBg;
+    margin:0;
+    display:grid;
+    place-items: center;
+    height:100vh;
+}
+
+.white {
+    color:$white;
+}
+
+.white:hover {
+    color:$cyan;
+    cursor:pointer;
+}
+
+hr {
+    opacity:25%;
+}
+
+
+//container
+
+.container {
+    width:90%;
+    max-width:300px;
+    overflow:hidden;
+    border-radius:15px;
+    padding:20px;
+    background-color: $cardBg;
+}
+
+//image--equilibrium
+.image--equilibrium {
+    width:100%;
+    border-radius:15px;
+}
+
+.image--equilibrium:hover {
+    cursor:pointer;
+}
+
+//view
+.image-container {
+    position:relative;
+}
+
+.view--container {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:98%;
+    border-radius:15px;
+    display:grid;
+    place-items: center;
+}
+
+.view {
+    display:none;
+}
+
+.view--container:hover {
+    background-color: rgba($cyan, 0.25);
+    cursor:pointer;
+    
+    .view {
+        display:flex;
+    }
+}
+
+//context
+.details {
+    h1 {
+        color:$white;
+        font-size:22px;
+    }
+
+    h1:hover {
+        color:$cyan;
+        cursor:pointer;
+    }
+
+    p {
+        color:$softBlue;
+        display:flex;
+    }
+
+    p:first-child {
+        color:$cyan;
+    }
+
+    .details--price {
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .icons {
+        object-fit: contain;
+    }
+}
+
+.profile {
+    display:flex;
+    place-items: center;
+    
+    p {
+        margin-left:15px;
+    }
+
+    img {
+        height:35px;
+        border:1px solid white;
+        border-radius:50%;
+    }
+}
